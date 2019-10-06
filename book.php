@@ -12,12 +12,12 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if(isset($_POST['submit']))
 {
 
- $tour = $_POST['tour'];
  $name = $_POST['name'];
- $address = $_POST['address'];
  $phone = $_POST['phone'];
  $email = $_POST['email'];
+ $address = $_POST['address'];
  $nationality = $_POST['nationality'];
+ $tour = $_POST['tour'];
  $adults = $_POST['adults'];
  $child = $_POST['child'];
  $datefrom = $_POST['datefrom'];
@@ -28,7 +28,7 @@ if(isset($_POST['submit']))
  $remark = $_POST['remark'];
 
 
- $sql = "INSERT INTO `s_cubedb`.`booking` (`tour`, `name`, `address`, `phone`, `email`, `nationality`, `adults`, `child`, `datefrom`, `dateto`, `passport`, `stay`, `days`, `remark`) VALUES ('".$tour."','".$name."','".$address."','".$phone."','".$email."','".$nationality."','".$adults."','".$child."','".$datefrom."','".$dateto."','".$passport."','".$stay."','".$days."' ,'".$remark."')";
+ $sql = "INSERT INTO `s_cubedb`.`booking` (`name`, `phone`, `email`, `address`, `nationality`, `tour`, `adults`, `child`, `datefrom`, `dateto`, `passport`, `stay`, `days`, `remark`) VALUES ('".$name."','".$phone."','".$email."','".$address."','".$nationality."','".$tour."','".$adults."','".$child."','".$datefrom."','".$dateto."','".$passport."','".$stay."','".$days."' ,'".$remark."')";
 $retval = mysqli_query( $conn, $sql );
 
 }

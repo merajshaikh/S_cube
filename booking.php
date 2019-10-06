@@ -7,13 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
-  <style type="text/css">    
+    <style type="text/css">  
     body {
         color: #566787;
         background: #f5f5f5;
         font-family: "Open Sans", sans-serif;
     }
-  </style>
+  	</style>
 </head>
 <body>
 	<!-- navbar -->
@@ -35,46 +35,169 @@
     <li class="nav-item">
       <a class="nav-link" href="aboutus.html">About Us</a>
     </li>
-    <li class="nav-item active">
+    <li class="nav-item">
       <a class="nav-link" href="contactus.php">Contact us</a>
     </li>
   </ul>
 	</nav>
   <!-- nav ends -->
-<h2>ONLINE BOOKING FORM</h2><br><br>
-					<form action="book.php" method="post" >
-					<table>
 
 <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2 m-auto">
-            <div class="contact-form">
-              <h1>Contact Us</h1>
-              <p class="hint-text">We'd love to hear from you, please drop us a line if you've any query.</p>
-              <form action="feedback.php" method="post">
+            <div class=""><br>
+              <h1 align="center">ONLINE BOOKING FORM</h1> <br>
+              <form action="book.php" method="post">
+                <h3>Personal Info</h3>
                 <div class="row">
                   <div class="col-sm-6">
-                    <div class="form-group">
-                      <label for="inputFirstName">Full Name</label>
-                      <input type="text" name="name" class="form-control" id="inputFirstName" required>
+                    <div class="form-group required">
+                      <label for="name">Full Name *</label>
+                      <input type="text" name="name" class="form-control" id="name" required>
                     </div>
                   </div>
                   <div class="col-sm-6">
-                    <div class="form-group">
-                      <label for="inputLastName">Phone no.</label>
-                      <input type="tel" name="phone" class="form-control" id="inputPhoneNo" required>
+                    <div class="form-group required">
+                      <label for="no">Phone no. *</label>
+                      <input type="tel" name="phone" class="form-control" id="no" required maxlength="10">
                     </div>
                   </div>
-                </div>            
+                </div> 
                 <div class="form-group">
-                  <label for="inputEmail">Email Address</label>
+                  <label for="inputEmail" class="control-label">Email Address *</label>
                   <input type="email" name="email" class="form-control" id="inputEmail" required>
+                </div>           
+                <div class="form-group ">
+                  <label for="address">Full Address</label>
+                  <input type="text" name="address" class="form-control" id="address" required>
                 </div>
-                <div class="form-group">
-                  <label for="inputMessage">Message</label>
-                  <textarea class="form-control" name="message" id="inputMessage" rows="5" required></textarea>
+                <div class="form-group required">
+                  <label for="Nationality">Nationality *</label>
+                  <input type="text" name="nationality" class="form-control" id="nationality" required>
                 </div>
-                <input type="submit" class="btn btn-primary" value="Submit">
+                
+                
+                <br><h3>Select Tour</h3>
+                <div class="form-group required col-sm-6">
+				  <select class="form-control" name="tour" id="sel1">
+				  	<option>Select</option>
+				    <option value="Goa">Goa</option>
+					<option value="Golden_Triangle">Golden Triangle</option>
+					<option value="Kashmir">Kashmir</option>
+					<option value="Europe">Europe</option>
+					<option value="Dubai">Dubai</option>
+					<option value="Singapore">Singapore</option>
+				  </select>
+				</div>
+
+
+				<br><h3>Total persons </h3>
+						<div class="row">
+							<div class="form-group required col-sm-6">
+							 <label for="sel2">Adults *</label>
+							 	<select class="form-control" name="adults" id="sel2">
+							 			<option>Select</option>
+							    		<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10 & above</option>
+							 	</select>
+							</div>
+
+							<div class="form-group col-sm-6">
+							 <label for="sel3">Child </label>
+							 	<select class="form-control" name="child" id="sel3">
+							 			<option>Select</option>
+							    		<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10 & above</option>
+							 	</select>
+							</div>
+						</div>
+				
+
+				<br><h3>Tentative Tours Dates</h3>
+					<div class="row">
+						<div class="form-group required col-sm-6">
+							<tr>	
+								<td>From<br>
+								<input type="date" id="Date1" name="datefrom"> 
+								</td>
+						</div>		
+						<div class="form-group required col-sm-6">
+								<td>To<br>
+								<input type="date" id="Date2" name="dateto"> 
+								</td>
+							</tr>
+						</div>
+					</div>
+
+				
+				<br><h3>Other info.</h3>
+                <div class="form-group required col-sm-6">
+                	<label for="sel4">Passport *</label>
+				  <select class="form-control" name="passport" id="sel4">
+				    <option>Select</option>
+				    <option value="Yes">Yes</option>
+					<option value="No">No</option>
+				  </select>
+				</div>	
+
+
+				<div class="form-group required col-sm-6">
+                	<label for="sel5">Stay Type *</label>
+				  <select class="form-control" name="stay" id="sel5">
+				    <option>Select</option>
+				    <option value="Standard">Standard</option>
+					<option value="Delux">Delux</option>
+					<option value="Premium">Premium</option>
+				  </select>
+				</div>
+
+
+				<div class="form-group required col-sm-6">
+                	<label for="sel6">Number of days *</label>
+				  	<select class="form-control" name="days" id="sel6">
+				    <option>Select</option>
+				    <option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10 & above</option>
+				  	</select>
+				</div>
+
+				<div class="form-group">
+                  <label for="inputMessage">Remarks *</label>
+                  <textarea class="form-control" name="remark" rows="3" cols="20" required></textarea>
+                </div>	
+
+			
+
+
+
+
+
+                <input type="submit" class="btn btn-primary" value="submit" name="submit">
+                <input class="btn btn-primary" type="reset" value="Reset">
               </form>
             </div>
           </div>
@@ -82,127 +205,9 @@
       </div>
 
 	<!-- <div class="booking_form"><br>
-					<h2>ONLINE BOOKING FORM</h2><br><br>
-					<form action="book.php" method="post" >
-					<table>
-					
-					<tr><td colspan="2"><h3>Select Tour</h3></td><br>
-					</tr>
-					
-					<tr><td colspan="2" align="center"><select name="tour" required>
-							<option>Select</option>
-							<option value="Goa">Goa</option>
-							<option value="Golden_Triangle">Golden Triangle</option>
-							<option value="Kashmir">Kashmir</option>
-							<option value="Europe">Europe</option>
-							<option value="Dubai">Dubai</option>
-							<option value="Singapore">Singapore</option>
-							</select> *</td>
-					</tr>
-					
-					<tr><td colspan="2"><h3>Personal info.</h3></td>
-					</tr>
 					
 					
-					<tr>
-					<td>Name</td>
-					<td><input type="text" name="name" required placeholder="Full Name" > *</td>
-					</tr>
-					
-					<tr>
-					<td>Address</td>
-					<td><input type="text" name="address" required placeholder="Full address" ></td>
-					</tr>
-					
-					<tr>
-					<td>Mobile Number</td>
-					<td> <input type="tel" name="phone" placeholder="10 digit phone number"  pattern="^\d{10}$"> *</td>
-					</tr>
-					
-					<tr>
-					<td>Email address</td>
-					<td> <input type="email" name="email" required placeholder="abc@company.com"> *</td>
-					</tr>
-					
-					<tr>
-					<td>Nationality<br><br></td>
-					<td><input type="text" name="nationality" required  > *<br><br></td>
-					</tr>
-					
-					<tr>
-					<td colspan="2"><h3>Total persons</h3></td>
-					</tr>
-					
-					<tr>
-					<td>Adults<br>
-							<select name="adults" required >
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10 & above</option>
-						</select> *
-						</td>
-						<td>Childs<br>
-							<select name="child" required>
-							<option>Select</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10 & above</option>
-						</select>
-						</td>
-					</tr>
-					
-					<tr>
-						<td colspan="2"><br><h3>Tentative Tours Dates</h3></td>
-					</tr>
-						
-					<tr>	
-						<td>From<br>
-						<input type="date" id="Date1" name="datefrom"> *
-						</td>
-						
-						<td>To<br>
-						<input type="date" id="Date2" name="dateto"> *
-						</td>
 
-					</tr>
-					
-					
-					<tr><td colspan="2"><br><h3>Other info.</h3></td>
-					</tr>
-					<tr>
-						<td><br>Passport</td>
-						<td><br><select name="passport" required>
-							<option>Select</option>
-							<option value="Yes">Yes</option>
-							<option value="No">No</option>
-							</select> *				
-						</td>
-					</tr>
-					
-					<tr>
-						<td><br>Stay Type</td>
-						<td><br><select name="stay" required>
-							<option>Select</option>
-							<option value="Standard">Standard</option>
-							<option value="Delux">Delux</option>
-							<option value="Premium">Premium</option>
-							</select> *					
-						</td>
-					</tr>
 					
 					
 					<tr>
@@ -244,7 +249,7 @@
 				
 				</div> -->
 
-</div>
+
 
 
 
@@ -302,6 +307,7 @@
             </div>
           </div>
         </footer>
+        
         <!-- Copyright -->
         <section class="copyright">
           <div class="container">
@@ -314,9 +320,37 @@
             </div>
           </div>
         </section>
-    <!-- Footer -->
+        <!-- copyright ends -->
+    <!-- Footer ends -->
 
+    <!-- script for date -->
+		    <script>
+					var date = new Date();
+					var day = date.getDate();
+					var month = date.getMonth()+1;
+					var year = date.getFullYear();
+					
+					if (month < 10) month = "0" + month;
+					if (day < 10) day = "0" + day;
+					
+					var today = year + "-" + month + "-" + day;
+					document.getElementById("Date1").value = today;
+				</script>
+		        
+					 <script>
+					var date = new Date();
+					var day = date.getDate()+1;
+					var month = date.getMonth()+1;
+					var year = date.getFullYear();
+					
+					if (month < 10) month = "0" + month;
+					if (day < 10) day = "0" + day;
+					
+					var today = year + "-" + month + "-" + day;
+					document.getElementById("Date2").value = today;
+				</script>
 
+	<!--script ends  -->
 
 
 

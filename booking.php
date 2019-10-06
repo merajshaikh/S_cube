@@ -195,61 +195,17 @@
 
 
 
-
+                <center>
                 <input type="submit" class="btn btn-primary" value="submit" name="submit">
                 <input class="btn btn-primary" type="reset" value="Reset">
+            </center>
               </form>
             </div>
           </div>
         </div>
       </div>
 
-	<!-- <div class="booking_form"><br>
-					
-					
-
-					
-					
-					<tr>
-					<td>Number of days</td>
-						<td>
-							<select name="days" required>
-							<option>Select</option>*
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10 & above</option>
-						</select>*
-						</td>
-					</tr>
-					
-					<tr><td>
-						
-					</td>
-					</tr>
-					
-					<tr>
-							<td>Remark</td>
-							<td> <textarea name="remark" rows="3" cols="20"  style="height: 60px; width:400px;"></textarea></td>
-							</tr>
-					
-					<tr>
-					<td colspan="2"><br> <button type="submit" value="submit" name="submit" style="width:100px; height:25px; margin-left:40%;">Submit</td>
-					</tr>
-					</button>
-					
-					</table>
-					</form>
-				
-				</div> -->
-
-
+	
 
 
 

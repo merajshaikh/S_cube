@@ -72,13 +72,25 @@ $retval = mysqli_query( $conn, $sql );
 	</nav>
   <!-- nav ends -->
 
-  		<div class="form_success">
+  		<!-- <div class="form_success">
 			<p>
 			Form has been sent successfully<br>we will back to you shortly.<br>
 			<a href="index.html" style="text-decoration:none; color:red;">Back to Home</a>
 			</p>
-		</div>
+		</div> -->
+<br>
+<div class="card text-success border-success mb-3 mx-auto" style="max-width: 30rem; height: 30rem;">
+  <div class="card-header "><h3><center>Success!!!</center></h3></div>
+  <div class="card-body bg-light">
+    <h5 class="card-title text-success">Thanks for filling out our form!</h5>
+    <p class="card-text">We will look over your message and get back to you shortly.
+    If your inquiry is urgent, please use the telephone number listed below to talk to one of our staff members. Otherwise, we will reply by email as soon as possible.</p>
+  <form action="index.html">
+    <button type="submit" value="go to home" class="btn btn-secondary">Secondary</button>
+  </form>
 
+  </div>
+</div><br>
 
 
   <!--------------------------------------------footer----------------------------------------------------->

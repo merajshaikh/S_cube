@@ -12,12 +12,12 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if(isset($_POST['submit']))
 {
 
- $tour = $_POST['tour'];
  $name = $_POST['name'];
- $address = $_POST['address'];
  $phone = $_POST['phone'];
  $email = $_POST['email'];
+ $address = $_POST['address'];
  $nationality = $_POST['nationality'];
+ $tour = $_POST['tour'];
  $adults = $_POST['adults'];
  $child = $_POST['child'];
  $datefrom = $_POST['datefrom'];
@@ -28,7 +28,7 @@ if(isset($_POST['submit']))
  $remark = $_POST['remark'];
 
 
- $sql = "INSERT INTO `s_cubedb`.`booking` (`tour`, `name`, `address`, `phone`, `email`, `nationality`, `adults`, `child`, `datefrom`, `dateto`, `passport`, `stay`, `days`, `remark`) VALUES ('".$tour."','".$name."','".$address."','".$phone."','".$email."','".$nationality."','".$adults."','".$child."','".$datefrom."','".$dateto."','".$passport."','".$stay."','".$days."' ,'".$remark."')";
+ $sql = "INSERT INTO `s_cubedb`.`booking` (`name`, `phone`, `email`, `address`, `nationality`, `tour`, `adults`, `child`, `datefrom`, `dateto`, `passport`, `stay`, `days`, `remark`) VALUES ('".$name."','".$phone."','".$email."','".$address."','".$nationality."','".$tour."','".$adults."','".$child."','".$datefrom."','".$dateto."','".$passport."','".$stay."','".$days."' ,'".$remark."')";
 $retval = mysqli_query( $conn, $sql );
 
 }
@@ -44,41 +44,60 @@ $retval = mysqli_query( $conn, $sql );
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">    
+    body {
+        color: #566787;
+        background: #f5f5f5;
+        font-family: "Open Sans", sans-serif;
+    }
+    </style>
 </head>
 <body>
 	<!-- navbar -->
 
-	<nav class="navbar navbar-expand-sm bg-light navbar-light">
-  <ul class="navbar-nav">
-  	<a class="navbar-brand" href="#">
-    <img src="" alt="Logo" style="width:40px;">
-  </a>
-    <li class="nav-item">
-      <a class="nav-link" href="index.html">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="services.html">Services</a>
-    </li>
-    <li class="nav-item ">
-      <a class="nav-link" href="packages.html">Packages</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="aboutus.html">About Us</a>
-    </li>
-    <li class="nav-item active">
-      <a class="nav-link" href="contactus.php">Contact us</a>
-    </li>
-  </ul>
-	</nav>
+	<nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="" alt="Logo" style="width:40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="packages.html">Packages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactus.php">Contact us</a>
+        </li>
+        </ul>
+    </div>
+  </nav>
   <!-- nav ends -->
 
-  		<div class="form_success">
-			<p>
-			Form has been sent successfully<br>we will back to you shortly.<br>
-			<a href="index.html" style="text-decoration:none; color:red;">Back to Home</a>
-			</p>
-		</div>
 
+    <br>
+    <div class="card text-success border-success mb-3 mx-auto" style="max-width: 30rem; height: 30rem;">
+      <div class="card-header "><h3><center>Success!!!</center></h3></div>
+      <div class="card-body bg-light">
+        <h5 class="card-title text-success">Thanks for filling out our form!</h5>
+        <p class="card-text">We will look over your message and get back to you shortly.
+        If your inquiry is urgent, please use the telephone number listed below to talk to one of our staff members. Otherwise, we will reply by email as soon as possible.</p>
+      <form action="index.html">
+        <button type="submit" value="go to home" class="btn btn-secondary">Secondary</button>
+      </form>
+
+      </div>
+    </div><br>
 
 
   <!--------------------------------------------footer----------------------------------------------------->
@@ -124,10 +143,10 @@ $retval = mysqli_query( $conn, $sql );
               <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
                 <h5 class="mb-4 font-weight-bold"> &nbsp &nbsp &nbsp  &nbsp CONNECT WITH US</h5>
                 <ul class="social-pet mt-4">
-                  <li><a href="https://www.facebook.com/" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="https://www.twitter.com" title="twitter"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="https://www.aboutme.google.com" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
-                  <li><a href="https://www.instagram.com" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://www.facebook.com/" title="facebook" target="blank"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.twitter.com" title="twitter" target="blank"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.aboutme.google.com" title="google-plus" target="blank"><i class="fab fa-google-plus-g"></i></a></li>
+                  <li><a href="https://www.instagram.com" title="instagram" target="blank"><i class="fab fa-instagram"></i></a></li>
                 </ul>
               </div>
             </div>
